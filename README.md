@@ -20,24 +20,6 @@ Scalable API architecture patterns
 
 Design Overview
 
-The system architecture follows this structure:
-
-User
-  │
-  ├── POST /ingest-url → FastAPI
-  │       - Validates URL input
-  │       - Creates metadata entry (status = PENDING)
-  │       - Launches background thread to process the URL
-  │       - Returns 202 Accepted
-  │
-  ├── Background Thread
-  │       - Fetches and cleans web content
-  │       - Converts text into simple embeddings
-  │       - Updates database (status = COMPLETED)
-  │
-  └── POST /query → FastAPI
-          - Accepts a text query
-          - Returns a basic simulated answer
 
 Components
 
@@ -226,3 +208,4 @@ It can be easily extended to include real embeddings, retrieval systems, and dis
 Author
 
 Developed as part of a recruitment challenge to demonstrate understanding of scalable RAG architecture design, asynchronous API development, and practical system implementation.
+
