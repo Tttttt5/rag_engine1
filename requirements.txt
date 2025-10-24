@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+redis
+rq
+sqlalchemy
+requests
+qdrant-client
+sentence-transformers
+
