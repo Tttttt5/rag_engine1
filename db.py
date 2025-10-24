@@ -1,4 +1,4 @@
-# db.py
+
 from sqlalchemy import create_engine, Column, String, Text, Enum, DateTime
 from sqlalchemy.orm import declarative_base, sessionmaker
 import enum
@@ -25,4 +25,5 @@ class Ingestion(Base):
 DATABASE_URL = "sqlite:///rag_metadata.db"
 engine = create_engine(DATABASE_URL, echo=False)
 Base.metadata.create_all(engine)
+
 SessionLocal = sessionmaker(bind=engine)
