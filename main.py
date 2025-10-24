@@ -1,4 +1,4 @@
-# main.py
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, HttpUrl
 from db import SessionLocal, Ingestion, Status
@@ -89,3 +89,4 @@ async def query(req: QueryRequest):
 @app.get("/")
 def home():
     return {"message": "RAG Engine running (no Redis, no Qdrant)!"}
+
