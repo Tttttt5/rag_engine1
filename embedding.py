@@ -1,4 +1,4 @@
-# embedding.py
+
 from collections import Counter
 import math
 
@@ -22,4 +22,5 @@ def _tfidf_vector(text):
 
 def get_corpus_embeddings():
     """Return one embedding vector (dict) per document."""
+
     return [_tfidf_vector(doc) for doc in _corpus]
